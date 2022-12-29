@@ -1,0 +1,113 @@
+# dune exec p7
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /Users/ameya/dev/advent_of_code/2022/p7
+# Auto-detected concurrency: 8
+$ /Users/ameya/.opam/base/bin/ocamlc.opt -config > /var/folders/bb/rbq0q1sn07z4zxhhlv2rhpsm0000gn/T/dune_57f74d_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/ameya/.opam/base/lib/toplevel"
+#  ; ocaml_bin = External "/Users/ameya/.opam/base/bin"
+#  ; ocaml = Ok External "/Users/ameya/.opam/base/bin/ocaml"
+#  ; ocamlc = External "/Users/ameya/.opam/base/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/ameya/.opam/base/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/ameya/.opam/base/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/ameya/.opam/base/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/ameya/.opam/base/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/ameya/.opam/base/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/ameya/dev/advent_of_code/2022/p7"
+#        ; "INSIDE_DUNE" :
+#            "/Users/ameya/dev/advent_of_code/2022/p7/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/ameya/dev/advent_of_code/2022/p7/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/ameya/dev/advent_of_code/2022/p7/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/ameya/dev/advent_of_code/2022/p7/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/Users/ameya/.opam/base/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.14.0"
+#      ; standard_library_default = "/Users/ameya/.opam/base/lib/ocaml"
+#      ; standard_library = "/Users/ameya/.opam/base/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "arm64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "cc"; "-c"; "-Wno-trigraphs" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "aarch64-apple-darwin22.2.0"
+#      ; target = "aarch64-apple-darwin22.2.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X031"
+#      ; cmi_magic_number = "Caml1999I031"
+#      ; cmo_magic_number = "Caml1999O031"
+#      ; cma_magic_number = "Caml1999A031"
+#      ; cmx_magic_number = "Caml1999Y031"
+#      ; cmxa_magic_number = "Caml1999Z031"
+#      ; ast_impl_magic_number = "Caml1999M031"
+#      ; ast_intf_magic_number = "Caml1999N031"
+#      ; cmxs_magic_number = "Caml1999D031"
+#      ; cmt_magic_number = "Caml1999T031"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/ameya/.opam/base/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /Users/ameya/.opam/base/lib/base -I /Users/ameya/.opam/base/lib/base/base_internalhash_types -I /Users/ameya/.opam/base/lib/base/caml -I /Users/ameya/.opam/base/lib/base/md5 -I /Users/ameya/.opam/base/lib/base/shadow_stdlib -I /Users/ameya/.opam/base/lib/base_bigstring -I /Users/ameya/.opam/base/lib/base_quickcheck -I /Users/ameya/.opam/base/lib/base_quickcheck/ppx_quickcheck/runtime -I /Users/ameya/.opam/base/lib/bin_prot -I /Users/ameya/.opam/base/lib/bin_prot/shape -I /Users/ameya/.opam/base/lib/core -I /Users/ameya/.opam/base/lib/core/base_for_tests -I /Users/ameya/.opam/base/lib/core/validate -I /Users/ameya/.opam/base/lib/fieldslib -I /Users/ameya/.opam/base/lib/int_repr -I /Users/ameya/.opam/base/lib/jane-street-headers -I /Users/ameya/.opam/base/lib/parsexp -I /Users/ameya/.opam/base/lib/ppx_assert/runtime-lib -I /Users/ameya/.opam/base/lib/ppx_bench/runtime-lib -I /Users/ameya/.opam/base/lib/ppx_compare/runtime-lib -I /Users/ameya/.opam/base/lib/ppx_enumerate/runtime-lib -I /Users/ameya/.opam/base/lib/ppx_expect/collector -I /Users/ameya/.opam/base/lib/ppx_expect/common -I /Users/ameya/.opam/base/lib/ppx_expect/config -I /Users/ameya/.opam/base/lib/ppx_expect/config_types -I /Users/ameya/.opam/base/lib/ppx_hash/runtime-lib -I /Users/ameya/.opam/base/lib/ppx_here/runtime-lib -I /Users/ameya/.opam/base/lib/ppx_inline_test/config -I /Users/ameya/.opam/base/lib/ppx_inline_test/runtime-lib -I /Users/ameya/.opam/base/lib/ppx_log/types -I /Users/ameya/.opam/base/lib/ppx_module_timer/runtime -I /Users/ameya/.opam/base/lib/ppx_sexp_conv/runtime-lib -I /Users/ameya/.opam/base/lib/sexplib -I /Users/ameya/.opam/base/lib/sexplib0 -I /Users/ameya/.opam/base/lib/splittable_random -I /Users/ameya/.opam/base/lib/stdio -I /Users/ameya/.opam/base/lib/time_now -I /Users/ameya/.opam/base/lib/typerep -I /Users/ameya/.opam/base/lib/variantslib -I lib/.ftree.objs/byte -I lib/.ftree.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/ameya/.opam/base/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/ftree.cmxa /Users/ameya/.opam/base/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /Users/ameya/.opam/base/lib/base/base_internalhash_types /Users/ameya/.opam/base/lib/base/caml/caml.cmxa /Users/ameya/.opam/base/lib/sexplib0/sexplib0.cmxa /Users/ameya/.opam/base/lib/base/shadow_stdlib/shadow_stdlib.cmxa /Users/ameya/.opam/base/lib/base/base.cmxa -I /Users/ameya/.opam/base/lib/base /Users/ameya/.opam/base/lib/ppx_sexp_conv/runtime-lib/ppx_sexp_conv_lib.cmxa /Users/ameya/.opam/base/lib/ppx_compare/runtime-lib/ppx_compare_lib.cmxa /Users/ameya/.opam/base/lib/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmxa /Users/ameya/.opam/base/lib/ppx_hash/runtime-lib/ppx_hash_lib.cmxa /Users/ameya/.opam/base/lib/ppx_here/runtime-lib/ppx_here_lib.cmxa /Users/ameya/.opam/base/lib/ppx_assert/runtime-lib/ppx_assert_lib.cmxa /Users/ameya/.opam/base/lib/ppx_bench/runtime-lib/ppx_bench_lib.cmxa /Users/ameya/.opam/base/lib/base/md5/md5_lib.cmxa /Users/ameya/.opam/base/lib/ocaml/unix.cmxa -I /Users/ameya/.opam/base/lib/ocaml /Users/ameya/.opam/base/lib/ocaml/bigarray.cmxa -I /Users/ameya/.opam/base/lib/ocaml /Users/ameya/.opam/base/lib/fieldslib/fieldslib.cmxa /Users/ameya/.opam/base/lib/variantslib/variantslib.cmxa /Users/ameya/.opam/base/lib/bin_prot/shape/bin_shape_lib.cmxa /Users/ameya/.opam/base/lib/bin_prot/bin_prot.cmxa -I /Users/ameya/.opam/base/lib/bin_prot /Users/ameya/.opam/base/lib/ppx_inline_test/config/inline_test_config.cmxa /Users/ameya/.opam/base/lib/jane-street-headers/jane_street_headers.cmxa /Users/ameya/.opam/base/lib/time_now/time_now.cmxa -I /Users/ameya/.opam/base/lib/time_now /Users/ameya/.opam/base/lib/ppx_inline_test/runtime-lib/ppx_inline_test_lib.cmxa /Users/ameya/.opam/base/lib/stdio/stdio.cmxa /Users/ameya/.opam/base/lib/ppx_module_timer/runtime/ppx_module_timer_runtime.cmxa /Users/ameya/.opam/base/lib/typerep/typerep_lib.cmxa /Users/ameya/.opam/base/lib/ppx_expect/common/expect_test_common.cmxa /Users/ameya/.opam/base/lib/ppx_expect/config_types/expect_test_config_types.cmxa /Users/ameya/.opam/base/lib/ppx_expect/collector/expect_test_collector.cmxa -I /Users/ameya/.opam/base/lib/ppx_expect/collector /Users/ameya/.opam/base/lib/ppx_expect/config/expect_test_config.cmxa /Users/ameya/.opam/base/lib/parsexp/parsexp.cmxa /Users/ameya/.opam/base/lib/sexplib/sexplib.cmxa /Users/ameya/.opam/base/lib/ppx_log/types/ppx_log_types.cmxa /Users/ameya/.opam/base/lib/splittable_random/splittable_random.cmxa /Users/ameya/.opam/base/lib/base_quickcheck/base_quickcheck.cmxa /Users/ameya/.opam/base/lib/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime.cmxa /Users/ameya/.opam/base/lib/int_repr/int_repr.cmxa /Users/ameya/.opam/base/lib/base_bigstring/base_bigstring.cmxa -I /Users/ameya/.opam/base/lib/base_bigstring /Users/ameya/.opam/base/lib/core/base_for_tests/base_for_tests.cmxa /Users/ameya/.opam/base/lib/core/validate/validate.cmxa /Users/ameya/.opam/base/lib/core/core.cmxa -I /Users/ameya/.opam/base/lib/core /Users/ameya/.opam/base/lib/ocaml/str.cmxa -I /Users/ameya/.opam/base/lib/ocaml bin/.main.eobjs/native/dune__exe__Main.cmx)
