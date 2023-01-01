@@ -3,7 +3,7 @@
 (* A directory should have a reference to it's parent - this should be an option, just in case it's the root *)
 (* But these both need to be the same type*)
 
-(* I need to construct the file tree, and then find all directories with size < 10k *)
+(* I need to construct the file tree, and then find all directories with size < 100k *)
 (* We can count files more than once! *)
 
 open Core
